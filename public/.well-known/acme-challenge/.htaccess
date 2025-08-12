@@ -1,0 +1,2 @@
+# Disable the Rewrite Engine to prevent any redirections during the Lets Encrypt validation process
+RewriteEngine Off
