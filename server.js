@@ -76,7 +76,7 @@ app.post('/api/contact', async (req, res) => {
     const mailOptions = {
       from: emailUser,
       to: emailUser,
-      subject: 'Contact Request : ',
+      subject: `Contact Request from ${name}`,
       html: `
         Contact Request From Website. Please reply to the client by copying the email and creating a new message.<br/>Details;<br/><br/><br/>
         Client Name : ${name}<br/><br/>
@@ -129,5 +129,4 @@ app.use((req, res) => {
 
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
-  console.log('Contact form API available at /api/contact');
 });
